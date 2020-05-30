@@ -33,5 +33,12 @@ namespace MediatR.RequestAuthorization
 
         bool HasClaim(string type, string value);
         bool HasClaim(Predicate<Claim> match);
+
+        /// <summary>
+        /// Additional attributes to access in user context
+        /// </summary>
+        /// <param name="key"></param>
+        /// <returns></returns>
+        string ExtraAttribute(string key);
     }
 }
