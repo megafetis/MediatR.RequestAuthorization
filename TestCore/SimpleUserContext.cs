@@ -39,5 +39,10 @@ namespace TestCore
         {
             throw new NotImplementedException();
         }
+
+        public string ExtraAttribute(string key)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

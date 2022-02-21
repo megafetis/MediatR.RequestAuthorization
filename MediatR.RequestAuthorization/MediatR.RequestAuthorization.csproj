@@ -1,12 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
     <AssemblyName>MediatR.RequestAuthorization</AssemblyName>
     <Copyright>Copyright Evgeniy Fetisov</Copyright>
     <PackageLicenseUrl>https://github.com/megafetis/MediatR.RequestAuthorization/blob/master/LICENSE.txt</PackageLicenseUrl>
     <PackageId>MediatR.RequestAuthorization</PackageId>
-    <Version>1.0.1</Version>
+    <Version>1.1.0</Version>
     <RepositoryUrl>git://github.com/megafetis/MediatR.RequestAuthorization</RepositoryUrl>
     <PackageProjectUrl>https://github.com/megafetis/MediatR.RequestAuthorization</PackageProjectUrl>
     <RepositoryType>git</RepositoryType>
@@ -22,7 +22,7 @@
 
 
   <ItemGroup>
-    <PackageReference Include="MediatR" Version="8.0.0" />
+    <PackageReference Include="MediatR" Version="10.0.1" />
   </ItemGroup>
 
 
