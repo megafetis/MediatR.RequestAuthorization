@@ -16,9 +16,12 @@ namespace NUnitTest
         public void Setup()
         {
             var services = new ServiceCollection();
-            services.AddMediatR(typeof(UserProfile).Assembly);
+            services.AddMediatR(cfg =>
+            {
+                cfg.RegisterServicesFromAssembly(typeof(UserProfile).Assembly);
+                cfg.AddOpenBehavior(typeof(RequestAuthorizationBehavior<,>));
+            });
             services.AddTransient<IUserContext, SimpleUserContext>();
-            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(RequestAuthorizationBehavior<,>));
             services.AddTransient(typeof(IAuthorizationRule<GetUserProfileQuery>), typeof(GetUserProfileQuerySecurityRule));
            
             services.AddSingleton<SimpleUserManager>();
